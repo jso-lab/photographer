@@ -17,41 +17,46 @@ import Container from '@mui/material/Container';
 
 const tiers = [
 	{
-		title: 'Free',
-		price: '0',
-		description: [
-			'10 users included',
-			'2 GB of storage',
-			'Help center access',
-			'Email support',
-		],
-		buttonText: 'Sign up for free',
-		buttonVariant: 'outlined',
+		title: 'Juste moi',
+		prix: '130',
+		description: ['Séance pour une personne', 'en extérieur ou en studio '],
 	},
 	{
-		title: 'Pro',
-		subheader: 'Most popular',
-		price: '15',
+		title: 'Famille *',
+		prix: '220',
 		description: [
-			'20 users included',
-			'10 GB of storage',
-			'Help center access',
-			'Priority email support',
+			'Pour la famille ou les amis',
+			'jusqu’à 4 personnes',
+			'en extérieur ou en studio',
 		],
-		buttonText: 'Get started',
-		buttonVariant: 'contained',
 	},
 	{
-		title: 'Enterprise',
-		price: '30',
+		title: 'Pour deux',
+		prix: '195',
+		description: ['Séance pour une personne', 'en extérieur ou en studio '],
+	},
+
+	{
+		title: 'Il était une fois',
+		prix: '160',
 		description: [
-			'50 users included',
-			'30 GB of storage',
-			'Help center access',
-			'Phone & email support',
+			'Photo de grossesse',
+			'A votre domicile',
+			'en extérieur ou en studio',
 		],
-		buttonText: 'Contact us',
-		buttonVariant: 'outlined',
+	},
+	{
+		title: "J'immortalise l'évènement",
+		description: [
+			'sur mesure',
+			'Prestation de mariage',
+			'ou de baptême sur devis',
+		],
+	},
+	{
+		title: 'Mon bébé',
+		prix: '100',
+		description: ["Photo d'enfant", "jusqu'à 3 ans", 'à votre domicile'],
 	},
 ];
 
@@ -117,23 +122,18 @@ function PricingContent() {
 					variant='h5'
 					align='center'
 					color='text.secondary'
-					component='p'>
-					Quickly build an effective pricing table for your potential customers
-					with this layout. It&apos;s built with default MUI components with
-					little customization.
+					component='p'
+					sx={{ my: 4, mx: 1.5 }}>
+					Je vous propose les prestations suivantes. Les thématiques ci-dessous
+					ne sont pas exhaustives. Pour plus de renseignements, n'hésitez pas à
+					me contacter. Nous verrons ensemble votre projet.
 				</Typography>
 			</Container>
 			{/* End hero unit */}
 			<Container maxWidth='md' component='main'>
 				<Grid container spacing={5} alignItems='flex-end'>
 					{tiers.map((tier) => (
-						// Enterprise card is full width at sm breakpoint
-						<Grid
-							item
-							key={tier.title}
-							xs={12}
-							sm={tier.title === 'Enterprise' ? 12 : 6}
-							md={4}>
+						<Grid item key={tier.title} xs={12} sm={tier.title} md={4}>
 							<Card>
 								<CardHeader
 									title={tier.title}
@@ -161,10 +161,7 @@ function PricingContent() {
 											component='h2'
 											variant='h3'
 											color='text.primary'>
-											${tier.price}
-										</Typography>
-										<Typography variant='h6' color='text.secondary'>
-											/mo
+											${tier.prix}
 										</Typography>
 									</Box>
 									<ul>
@@ -188,7 +185,14 @@ function PricingContent() {
 						</Grid>
 					))}
 				</Grid>
+				<Typography sx={{ my: 5, mx: 1.5 }}>
+					<div>
+						*30 euros en supplément par personne au-delà de 4 (hormis enfant
+						jusqu’à 2 ans)
+					</div>
+				</Typography>
 			</Container>
+
 			<Box>
 				<Copyright />
 			</Box>
