@@ -1,10 +1,8 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -37,6 +35,7 @@ export default function Album() {
 							Gallerie de photos
 						</Typography>
 						<Typography
+							sx={{ pb: 4 }}
 							variant='h5'
 							align='center'
 							color='text.secondary'
@@ -45,13 +44,6 @@ export default function Album() {
 							contents, the creator, etc. Make it short and sweet, but not too
 							short so folks don&apos;t simply skip over it entirely.
 						</Typography>
-						<Stack
-							sx={{ pt: 4 }}
-							direction='row'
-							spacing={2}
-							justifyContent='center'>
-							<Button variant='outlined'>Secondary action</Button>
-						</Stack>
 					</Container>
 				</Box>
 				<Container sx={{ py: 5 }} maxWidth='lg'>

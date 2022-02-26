@@ -1,5 +1,7 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
@@ -59,6 +61,9 @@ export default function Index() {
 				</Toolbar>
 			</AppBar>
 			<Blog post={mainFeaturedPost} />
+			<Stack sx={{ pt: 4 }} direction='row' spacing={2} justifyContent='center'>
+				<Button variant='outlined'>Parcourir le site</Button>
+			</Stack>
 
 			<Copyright />
 		</React.Fragment>
