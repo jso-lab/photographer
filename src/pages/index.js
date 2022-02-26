@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
+import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Link from '../components/Link';
 import Copyright from '../components/Copyright';
@@ -19,19 +21,17 @@ const mainFeaturedPost = {
 const featuredPosts = [
 	{
 		title: 'Featured post',
-		date: 'Nov 12',
+
 		description:
 			'This is a wider card with supporting text below as a natural lead-in to additional content.',
 		image: 'https://source.unsplash.com/random',
-		imageLabel: 'Image Text',
 	},
 	{
 		title: 'Post title',
-		date: 'Nov 11',
+
 		description:
 			'This is a wider card with supporting text below as a natural lead-in to additional content.',
 		image: 'https://source.unsplash.com/random',
-		imageLabel: 'Image Text',
 	},
 ];
 
@@ -80,10 +80,34 @@ export default function Index() {
 				</Toolbar>
 			</AppBar>
 			<Blog post={mainFeaturedPost} />
-			<Stack sx={{ pt: 4 }} direction='row' spacing={2} justifyContent='center'>
-				<Button variant='outlined'>Parcourir le site</Button>
-			</Stack>
-			<FeaturedPost post={featuredPosts} />
+			<Container>
+				<Stack
+					sx={{ pt: 4 }}
+					direction='row'
+					spacing={2}
+					justifyContent='center'>
+					<Typography
+						variant='h5'
+						align='center'
+						color='text.secondary'
+						component='p'
+						sx={{ my: 4, mx: 1.5 }}>
+						Je vous propose les prestations suivantes. Les thématiques
+						ci-dessous ne sont pas exhaustives. Pour plus de renseignements,
+						n'hésitez pas à me contacter. Nous verrons ensemble votre projet.
+						<div>
+							<Button variant='outlined' sx={{ my: 4, mx: 1.5 }}>
+								Parcourir le site
+							</Button>
+						</div>
+					</Typography>
+				</Stack>
+				<Grid container spacing={4}>
+					{featuredPosts.map((post) => (
+						<FeaturedPost key={post.title} post={post} />
+					))}
+				</Grid>
+			</Container>
 
 			<Copyright />
 		</React.Fragment>

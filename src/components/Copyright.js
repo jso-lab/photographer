@@ -9,7 +9,7 @@ export default function Copyright() {
 				variant='body2'
 				color='text.secondary'
 				align='center'
-				sx={{ my: 7, mx: 1.5 }}>
+				sx={{ mt: 4, mx: 1.5 }}>
 				{'Copyright © '}
 				<div color='inherit'>Charles Cantin - photographe</div>{' '}
 				{new Date().getFullYear()}

@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Link from '../components/Link';
 import Copyright from '../components/Copyright';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
+import AppBar from '@mui/material/AppBar';
+import Link from '../components/Link';
+import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
@@ -13,7 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export default function SignInSide() {
+export default function SendMessage() {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		const data = new FormData(event.currentTarget);
@@ -21,6 +23,43 @@ export default function SignInSide() {
 
 	return (
 		<ThemeProvider theme={theme}>
+			<AppBar position='static' color='default'>
+				<Toolbar sx={{ flexWrap: 'wrap' }}>
+					<Typography variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
+						Charles Cantin - photographe
+					</Typography>
+					<nav>
+						<Link
+							variant='button'
+							color='text.primary'
+							href='/'
+							sx={{ my: 1, mx: 1.5 }}>
+							Accueil
+						</Link>
+						<Link
+							variant='button'
+							color='text.primary'
+							href='galleries'
+							sx={{ my: 1, mx: 1.5 }}>
+							Galleries
+						</Link>
+						<Link
+							variant='button'
+							color='text.primary'
+							href='tarifs'
+							sx={{ my: 1, mx: 1.5 }}>
+							Taris et prestations
+						</Link>
+						<Link
+							variant='button'
+							color='text.primary'
+							href='contact'
+							sx={{ my: 1, mx: 1.5 }}>
+							Contact
+						</Link>
+					</nav>
+				</Toolbar>
+			</AppBar>
 			<Grid container component='main' sx={{ height: '100vh' }}>
 				<CssBaseline />
 				<Grid
@@ -73,32 +112,22 @@ export default function SignInSide() {
 								fullWidth
 								name='message'
 								label='Votre message'
+								multiline
+								rows={8}
+								maxRows={10}
 								type='text'
 								id='message'
-							/>
-							<TextField
-								placeholder='votre message ici'
-								multiline
-								rows={2}
-								maxRows={4}
 							/>
 
 							<Button
 								type='submit'
 								fullWidth
 								variant='contained'
-								sx={{ mt: 3, mb: 2 }}>
+								sx={{ mt: 3, mb: 5 }}>
 								Envoyer
 							</Button>
 
-							<Box sx={{ my: 4 }}>
-								<div>
-									<Link to='/'>Accueil</Link>
-								</div>
-								<div>
-									<Link to='/galleries'>Galleries</Link>
-								</div>
-
+							<Box>
 								<Copyright />
 							</Box>
 						</Box>
