@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -7,6 +6,13 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import Toolbar from '@mui/material/Toolbar';
 import Link from '../components/Link';
 import Copyright from '../components/Copyright';
+import Blog from '../components/Blog';
+
+const mainFeaturedPost = {
+	title: 'Charles CANTIN - Photographe',
+
+	image: 'https://source.unsplash.com/random',
+};
 
 export default function Index() {
 	return (
@@ -52,9 +58,9 @@ export default function Index() {
 					</nav>
 				</Toolbar>
 			</AppBar>
-			<Container>
-				<Copyright />
-			</Container>
+			<Blog post={mainFeaturedPost} />
+
+			<Copyright />
 		</React.Fragment>
 	);
 }
