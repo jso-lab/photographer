@@ -51,6 +51,13 @@ export default function Index() {
 						<Link
 							variant='button'
 							color='text.primary'
+							href='/test'
+							sx={{ my: 1, mx: 1.5 }}>
+							Test
+						</Link>
+						<Link
+							variant='button'
+							color='text.primary'
 							href='/'
 							sx={{ my: 1, mx: 1.5 }}>
 							Accueil
