@@ -102,8 +102,6 @@ export default function SendMessage() {
 								id='email'
 								label='Votre email'
 								name='email'
-								autoComplete='email'
-								autoFocus
 							/>
 							<TextField
 								margin='normal'

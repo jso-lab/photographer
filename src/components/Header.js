@@ -1,17 +1,14 @@
-import {
-	AppBar,
-	Toolbar,
-	Typography,
-	makeStyles,
-	Button,
-	IconButton,
-	Drawer,
-	Link,
-	MenuItem,
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import makeStyles from '@mui/Styles/makeStyles';
+import AppBar from '@mui/material/AppBar';
+import MenuItem from '@mui/material/MenuItem';
+import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import MenuIcon from '@mui/icons-material/Menu';
 import React, { useState, useEffect } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 
 const headersData = [
 	{
@@ -135,12 +132,13 @@ export default function Header() {
 			return (
 				<Link
 					{...{
-						component: RouterLink,
+						component: Link,
 						to: href,
 						color: 'inherit',
 						style: { textDecoration: 'none' },
 						key: label,
-					}}>
+					}}
+					underline='hover'>
 					<MenuItem>{label}</MenuItem>
 				</Link>
 			);
@@ -161,7 +159,7 @@ export default function Header() {
 						key: label,
 						color: 'inherit',
 						to: href,
-						component: RouterLink,
+						component: Link,
 						className: menuButton,
 					}}>
 					{label}

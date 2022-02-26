@@ -17,15 +17,15 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright() {
 	return (
-		<Typography variant='body2' color='text.secondary' align='center'>
+        <Typography variant='body2' color='text.secondary' align='center'>
 			{'Copyright © '}
-			<Link color='inherit' href='https://mui.com/'>
+			<Link color='inherit' href='https://mui.com/' underline="hover">
 				Your Website
 			</Link>{' '}
 			{new Date().getFullYear()}
 			{'.'}
 		</Typography>
-	);
+    );
 }
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
