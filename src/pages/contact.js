@@ -18,7 +18,6 @@ const theme = createTheme();
 export default function SendMessage() {
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const data = new FormData(event.currentTarget);
 	};
 
 	return (
