@@ -10,6 +10,7 @@ import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import Copyright from '../components/Copyright';
 import Blog from '../components/Blog';
 import FeaturedPost from '../components/FeaturedPost';
+import DisplayImages from '../components/displayImages';
 
 const mainFeaturedPost = {
 	title: 'Charles CANTIN - Photographe',
@@ -18,7 +19,7 @@ const mainFeaturedPost = {
 };
 const featuredPosts = [
 	{
-		title: 'Featured post',
+		title: '',
 
 		description:
 			'This is a wider card with supporting text below as a natural lead-in to additional content.',
@@ -64,6 +65,7 @@ export default function Index() {
 						</div>
 					</Typography>
 				</Stack>
+				<DisplayImages />
 				<Grid container spacing={4}>
 					{featuredPosts.map((post) => (
 						<FeaturedPost key={post.title} post={post} />

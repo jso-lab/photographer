@@ -4,9 +4,7 @@ import Box from '@mui/material/Box';
 import Copyright from '../components/Copyright';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import AppBar from '@mui/material/AppBar';
-import Link from '../components/Link';
-import Toolbar from '@mui/material/Toolbar';
+import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
@@ -22,43 +20,7 @@ export default function SendMessage() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<AppBar position='static' color='default'>
-				<Toolbar sx={{ flexWrap: 'wrap' }}>
-					<Typography variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
-						Charles Cantin - photographe
-					</Typography>
-					<nav>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='/'
-							sx={{ my: 1, mx: 1.5 }}>
-							Accueil
-						</Link>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='galleries'
-							sx={{ my: 1, mx: 1.5 }}>
-							Galleries
-						</Link>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='tarifs'
-							sx={{ my: 1, mx: 1.5 }}>
-							Taris et prestations
-						</Link>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='contact'
-							sx={{ my: 1, mx: 1.5 }}>
-							Contact
-						</Link>
-					</nav>
-				</Toolbar>
-			</AppBar>
+			<ResponsiveAppBar />
 			<Grid container component='main' sx={{ height: '100vh' }}>
 				<CssBaseline />
 				<Grid
