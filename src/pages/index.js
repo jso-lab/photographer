@@ -3,12 +3,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
-import Toolbar from '@mui/material/Toolbar';
-import Link from '../components/Link';
+import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import Copyright from '../components/Copyright';
 import Blog from '../components/Blog';
 import FeaturedPost from '../components/FeaturedPost';
@@ -42,57 +40,7 @@ export default function Index() {
 				styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }}
 			/>
 			<CssBaseline />
-			<AppBar position='static' color='default'>
-				<Toolbar sx={{ flexWrap: 'wrap' }}>
-					<Typography variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
-						Charles Cantin - photographe
-					</Typography>
-					<nav>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='/AppBar'
-							sx={{ my: 1, mx: 1.5 }}>
-							AppBar
-						</Link>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='/test'
-							sx={{ my: 1, mx: 1.5 }}>
-							Test
-						</Link>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='/'
-							sx={{ my: 1, mx: 1.5 }}>
-							Accueil
-						</Link>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='galleries'
-							sx={{ my: 1, mx: 1.5 }}>
-							Galleries
-						</Link>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='tarifs'
-							sx={{ my: 1, mx: 1.5 }}>
-							Taris et prestations
-						</Link>
-						<Link
-							variant='button'
-							color='text.primary'
-							href='contact'
-							sx={{ my: 1, mx: 1.5 }}>
-							Contact
-						</Link>
-					</nav>
-				</Toolbar>
-			</AppBar>
+			<ResponsiveAppBar />
 			<Blog post={mainFeaturedPost} />
 			<Container>
 				<Stack
