@@ -14,10 +14,11 @@ sections:
   label: theme
   read_only: true
 - type: directory
-  path: src/pages
+  path: photographer/src/pages
   label: Pages
-  create: all
+  create: documents
   match: "**/*"
+  new_doc_ext: ".js"
 - type: directory
   path: src/components
   label: Components
