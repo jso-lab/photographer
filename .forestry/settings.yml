@@ -12,7 +12,6 @@ sections:
 - type: document
   path: src
   label: theme
-  match: "**/*"
   read_only: true
 - type: directory
   path: src/pages
@@ -24,8 +23,8 @@ sections:
   label: Components
   create: documents
   match: "**/*"
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: Images
+public_path: src/images
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
