@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: ''
 webhook_url: 
 sections:
 - type: directory
@@ -18,7 +18,7 @@ sections:
   label: Pages
   create: documents
   match: "**/*"
-  new_doc_ext: ".js"
+  new_doc_ext: js
 - type: directory
   path: src/components
   label: Components
