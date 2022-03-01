@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
@@ -47,7 +47,7 @@ export default function Index() {
 			<Blog post={mainFeaturedPost} />
 			<Container>
 				<Stack
-					sx={{ pt: 4 }}
+					sx={{ pt: 4, pb: 4 }}
 					direction='row'
 					spacing={2}
 					justifyContent='center'>
@@ -69,14 +69,23 @@ export default function Index() {
 						</div>
 					</Typography>
 				</Stack>
-				<DisplayImages />
-				<Grid container style={{ width: '100%' }} spacing={4}>
+				<Box display='flex' spacing={4}>
 					{featuredPosts.map((post) => (
 						<>
 							<FeaturedPost key={post.title} post={post} />
 						</>
 					))}
-				</Grid>
+				</Box>
+				<Typography
+					component='h1'
+					variant='h2'
+					align='center'
+					color='text.primary'
+					sx={{ pt: 8, pb: 6 }}
+					gutterBottom>
+					Galleries de photos
+				</Typography>
+				<DisplayImages />
 			</Container>
 
 			<Copyright />

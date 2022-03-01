@@ -1,57 +1,51 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-
-function srcset(image, size, rows = 1, cols = 1) {
-	return {
-		src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-		srcSet: `${image}?w=${size * cols}&h=${
-			size * rows
-		}&fit=crop&auto=format&dpr=2 2x`,
-	};
-}
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 export default function QuiltedImageList() {
 	return (
-		<ImageList
-			sx={{ width: 1000, height: 500 }}
-			variant='quilted'
-			cols={4}
-			rowHeight={121}>
-			{itemData.map((item) => (
-				<ImageListItem
-					key={item.img}
-					cols={item.cols || 1}
-					rows={item.rows || 1}>
+		<Container style={{ py: 4 }}>
+			<Box display='flex'>
+				<>
 					<img
-						{...srcset(item.img, 121, item.rows, item.cols)}
-						alt={item.title}
-						loading='lazy'
+						src={
+							'https://images.unsplash.com/photo-1546015720-b8b30df5aa27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+						}
+						alt='Bébé'
+						style={{ width: 560, height: 400, pr: 3 }}
 					/>
-				</ImageListItem>
-			))}
-		</ImageList>
+				</>
+
+				<div style={{ p: 2 }}>
+					<img
+						src={
+							'https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=754&q=80'
+						}
+						alt='famille'
+						style={{ width: 560, height: 400, mr: 2 }}
+					/>
+				</div>
+			</Box>
+			<Box display='flex'>
+				<div style={{ py: 2 }}>
+					<img
+						src={
+							'https://images.unsplash.com/photo-1501341810975-6a8bfd95c6ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=828&q=80'
+						}
+						alt='Mariage'
+						style={{ width: 560, height: 400, m: 3 }}
+					/>
+				</div>
+				<div style={{ py: 2 }}>
+					<img
+						src={
+							'https://images.unsplash.com/photo-1566516171511-1c411a59c8ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+						}
+						alt='Batême'
+						style={{ width: 560, height: 400, m: 3 }}
+					/>
+				</div>
+			</Box>
+		</Container>
 	);
 }
-
-const itemData = [
-	{
-		img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-		title: 'Breakfast',
-		rows: 3,
-		cols: 2,
-	},
-	{
-		img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-		title: 'Burger',
-	},
-	{
-		img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-		title: 'Camera',
-	},
-	{
-		img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-		title: 'Coffee',
-		cols: 2,
-	},
-];
