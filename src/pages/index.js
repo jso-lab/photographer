@@ -19,18 +19,20 @@ const mainFeaturedPost = {
 };
 const featuredPosts = [
 	{
-		title: '',
+		title: 'En extérieur',
 
 		description:
-			'This is a wider card with supporting text below as a natural lead-in to additional content.',
-		image: 'https://source.unsplash.com/random',
+			'La lumière naturelle est idéal pour révéler les couleurs. Vous choisissez le lieu qui vous convient et le moment idéal de la journée',
+		image:
+			'https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 	},
 	{
-		title: 'Post title',
+		title: 'En studio',
 
 		description:
-			'This is a wider card with supporting text below as a natural lead-in to additional content.',
-		image: 'https://source.unsplash.com/random',
+			'Vous êtes reçu dans mon studio après une prise de rendez-vous. Toute une installation de pointe pour faire un beau cadre',
+		image:
+			'https://images.unsplash.com/photo-1603425013520-e0b30e6e37dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
 	},
 ];
 
@@ -55,20 +57,24 @@ export default function Index() {
 						color='text.secondary'
 						component='p'
 						sx={{ my: 4, mx: 1.5 }}>
-						Je vous propose les prestations suivantes. Les thématiques
-						ci-dessous ne sont pas exhaustives. Pour plus de renseignements,
-						n'hésitez pas à me contacter. Nous verrons ensemble votre projet.
+						Bienvenue sur le site web de Charles Cantin - photographe.
+						<br /> A travers des prestations de qualité, vous allez vous aimez
+						autrement. <br />
+						Chaque moment de la vie est mis en valeur par son expertise et ses
+						compétences.
+						<br />A travers des galleries de photos, découvrez ce qui vous
+						attend lors d'une séance.
 						<div>
-							<Button variant='outlined' sx={{ my: 4, mx: 1.5 }}>
-								Parcourir le site
-							</Button>
+							<Button sx={{ my: 4, mx: 1.5 }}>Parcourir le site</Button>
 						</div>
 					</Typography>
 				</Stack>
 				<DisplayImages />
-				<Grid container spacing={4}>
+				<Grid container style={{ width: '100%' }} spacing={4}>
 					{featuredPosts.map((post) => (
-						<FeaturedPost key={post.title} post={post} />
+						<>
+							<FeaturedPost key={post.title} post={post} />
+						</>
 					))}
 				</Grid>
 			</Container>

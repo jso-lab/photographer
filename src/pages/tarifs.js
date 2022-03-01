@@ -16,12 +16,12 @@ import Container from '@mui/material/Container';
 const tiers = [
 	{
 		title: 'Juste moi',
-		prix: '130',
+		montant: 130,
 		description: ['Séance pour une personne', 'en extérieur ou en studio '],
 	},
 	{
 		title: 'Famille *',
-		prix: '220',
+		montant: 220,
 		description: [
 			'Pour la famille ou les amis',
 			'jusqu’à 4 personnes',
@@ -30,13 +30,13 @@ const tiers = [
 	},
 	{
 		title: 'Pour deux',
-		prix: '195',
+		montant: 195,
 		description: ['Séance pour une personne', 'en extérieur ou en studio '],
 	},
 
 	{
 		title: 'Il était une fois',
-		prix: '160',
+		montant: 160,
 		description: [
 			'Photo de grossesse',
 			'A votre domicile',
@@ -53,7 +53,7 @@ const tiers = [
 	},
 	{
 		title: 'Mon bébé',
-		prix: '100',
+		montant: 100,
 		description: ["Photo d'enfant", "jusqu'à 3 ans", 'à votre domicile'],
 	},
 ];
@@ -123,7 +123,7 @@ function PricingContent() {
 											component='h2'
 											variant='h3'
 											color='text.primary'>
-											${tier.prix}
+											{tier.montant} €
 										</Typography>
 									</Box>
 									<ul>
