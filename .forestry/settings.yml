@@ -5,7 +5,7 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: src/images
+  path: images
   label: Images
   create: documents
   match: "**/*"
@@ -14,13 +14,13 @@ sections:
   label: theme
   read_only: true
 - type: directory
-  path: src/pages
+  path: pages
   label: Pages
   create: documents
   match: "**/*"
   new_doc_ext: js
 - type: directory
-  path: src/components
+  path: components
   label: Components
   create: documents
   match: "**/*"
