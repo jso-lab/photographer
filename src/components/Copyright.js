@@ -2,12 +2,12 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '../components/Link';
-import YoutubeIcon from '@mui/icons-material/Youtube';
+//import YoutubeIcon from '@mui/icons-material/Youtube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 const social = [
-	{ icon: YoutubeIcon },
+	//{ icon: YoutubeIcon },
 	{ icon: TwitterIcon },
 	{ icon: FacebookIcon },
 ];
