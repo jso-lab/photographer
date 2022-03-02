@@ -14,10 +14,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme();
 
 export default function SendMessage() {
-	const handleSubmit = (event) => {
-		event.preventDefault();
-	};
-
 	return (
 		<ThemeProvider theme={theme}>
 			<ResponsiveAppBar />
@@ -54,9 +50,7 @@ export default function SendMessage() {
 						</Typography>
 						<Box
 							component='form'
-							action='https://formspree.io/f/{form_id}'
-							method='post'
-							onSubmit={handleSubmit}
+							onSubmit={'https://formspree.io/f/{form_id'}
 							sx={{ mt: 1 }}>
 							<TextField
 								margin='normal'

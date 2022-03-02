@@ -65,7 +65,9 @@ export default function Index() {
 						<br />A travers des galleries de photos, découvrez ce qui vous
 						attend lors d'une séance.
 						<div>
-							<Button sx={{ my: 4, mx: 1.5 }}>Parcourir le site</Button>
+							<Button sx={{ my: 4, mx: 1.5 }} href='/galleries'>
+								Parcourir le site
+							</Button>
 						</div>
 					</Typography>
 				</Stack>
