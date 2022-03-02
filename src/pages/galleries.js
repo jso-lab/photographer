@@ -2,6 +2,7 @@ import * as React from 'react';
 import Copyright from '../components/Copyright';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
+import SingleGallery from '../components/SingleGallery';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -34,6 +35,9 @@ export default function Galleries() {
 					ne sont pas exhaustives. Pour plus de renseignements, n'hésitez pas à
 					me contacter. Nous verrons ensemble votre projet.
 				</Typography>
+			</Container>
+			<Container>
+				<SingleGallery />
 			</Container>
 
 			<Container

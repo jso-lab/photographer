@@ -6,7 +6,7 @@ export default function QuiltedImageList() {
 		<Container display='flex' style={{ py: 4 }}>
 			<div
 				sx={{
-					width: '90%',
+					width: '100%',
 					height: 100,
 				}}>
 				<img
