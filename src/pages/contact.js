@@ -54,7 +54,8 @@ export default function SendMessage() {
 						</Typography>
 						<Box
 							component='form'
-							noValidate
+							action='https://formspree.io/f/{form_id}'
+							method='post'
 							onSubmit={handleSubmit}
 							sx={{ mt: 1 }}>
 							<TextField
