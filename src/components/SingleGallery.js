@@ -61,9 +61,7 @@ export default function CustomizedAccordions() {
 					<Typography>Couple</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Box>
-						<CoupleAlbum />
-					</Box>
+					<CoupleAlbum />
 				</AccordionDetails>
 			</Accordion>
 			<Accordion

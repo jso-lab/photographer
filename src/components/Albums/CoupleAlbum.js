@@ -1,42 +1,41 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
-import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-const cards = [1, 2, 3, 4, 5, 6];
 
 const theme = createTheme();
 
 export default function Album() {
 	return (
 		<ThemeProvider theme={theme}>
-			<CssBaseline />
-
 			<main>
 				{/* Hero unit */}
 
-				<Container sx={{ py: 5 }} maxWidth='lg'>
-					{/* End hero unit */}
-					<Grid container spacing={4}>
-						{cards.map((card) => (
-							<Grid item key={card} xs={12} sm={6} md={4}>
-								<Card
-									sx={{
-										height: '100%',
-										display: 'flex',
-										flexDirection: 'column',
-									}}>
-									<CardMedia
-										component='img'
-										image='https://unsplash.com/photos/LMcvt8Rew4c'
-										alt='Couple'
-									/>
-								</Card>
-							</Grid>
-						))}
+				<Container
+					style={{
+						py: 1,
+						display: 'flex',
+						flexDirection: 'row',
+					}}>
+					<Grid xs={12} lg={6} md={6} sx={{ p: 2 }}>
+						<Card>
+							<CardMedia
+								component='img'
+								image='https://images.unsplash.com/photo-1519123648360-eeb65861dc66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80'
+								alt='Couple'
+							/>
+						</Card>
+					</Grid>
+					<Grid xs={12} lg={6} md={6} sx={{ p: 2 }}>
+						<Card>
+							<CardMedia
+								component='img'
+								image='https://images.unsplash.com/photo-1525442045200-0b22c8c869c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+								alt='Couple'
+							/>
+						</Card>
 					</Grid>
 				</Container>
 			</main>
