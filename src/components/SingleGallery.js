@@ -10,6 +10,7 @@ import Album from '../components/Album';
 import CoupleAlbum from '../components/Albums/CoupleAlbum';
 import FamilleAlbum from '../components/Albums/FamilleAlbum';
 import MariageAlbum from '../components/Albums/MariageAlbum';
+import BabyAlbum from '../components/Albums/BabyAlbum';
 
 const Accordion = styled((props) => (
 	<MuiAccordion disableGutters elevation={0} square {...props} />
@@ -93,9 +94,7 @@ export default function CustomizedAccordions() {
 					<Typography>Bébé</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Box>
-						<Album />
-					</Box>
+					<BabyAlbum />
 				</AccordionDetails>
 			</Accordion>
 			<Accordion
