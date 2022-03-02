@@ -8,6 +8,8 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import Album from '../components/Album';
 import CoupleAlbum from '../components/Albums/CoupleAlbum';
+import FamilleAlbum from '../components/Albums/FamilleAlbum';
+import MariageAlbum from '../components/Albums/MariageAlbum';
 
 const Accordion = styled((props) => (
 	<MuiAccordion disableGutters elevation={0} square {...props} />
@@ -71,9 +73,7 @@ export default function CustomizedAccordions() {
 					<Typography>Famille</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Box>
-						<Album />
-					</Box>
+					<FamilleAlbum />
 				</AccordionDetails>
 			</Accordion>
 			<Accordion
@@ -83,9 +83,7 @@ export default function CustomizedAccordions() {
 					<Typography>Mariage</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Box>
-						<Album />
-					</Box>
+					<MariageAlbum />
 				</AccordionDetails>
 			</Accordion>
 			<Accordion
