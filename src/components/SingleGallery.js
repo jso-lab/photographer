@@ -2,15 +2,15 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
-import Box from '@mui/material/Box';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import Album from '../components/Album';
 import CoupleAlbum from '../components/Albums/CoupleAlbum';
 import FamilleAlbum from '../components/Albums/FamilleAlbum';
 import MariageAlbum from '../components/Albums/MariageAlbum';
 import BabyAlbum from '../components/Albums/BabyAlbum';
+import BaptemeAlbum from '../components/Albums/BaptemeAlbum';
+import GrossesseAlbum from '../components/Albums/GrossesseAlbum';
 
 const Accordion = styled((props) => (
 	<MuiAccordion disableGutters elevation={0} square {...props} />
@@ -104,9 +104,7 @@ export default function CustomizedAccordions() {
 					<Typography>Baptême</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Box>
-						<Album />
-					</Box>
+					<BaptemeAlbum />
 				</AccordionDetails>
 			</Accordion>
 			<Accordion
@@ -116,9 +114,7 @@ export default function CustomizedAccordions() {
 					<Typography>Grossesse</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Box>
-						<Album />
-					</Box>
+					<GrossesseAlbum />
 				</AccordionDetails>
 			</Accordion>
 		</div>
