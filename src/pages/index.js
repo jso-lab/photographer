@@ -64,9 +64,9 @@ export default function Index() {
 						compétences.
 						<br />A travers des galleries de photos, découvrez ce qui vous
 						attend lors d'une séance.
-						<div>
+						<>
 							<Button sx={{ my: 4, mx: 1.5 }}>Parcourir le site</Button>
-						</div>
+						</>
 					</Typography>
 				</Stack>
 				<Box display='flex' spacing={4}>
