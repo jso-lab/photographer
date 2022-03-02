@@ -22,7 +22,7 @@ const featuredPosts = [
 		title: 'En extérieur',
 
 		description:
-			'La lumière naturelle est idéal pour révéler les couleurs. Vous choisissez le lieu qui vous convient et le moment idéal de la journée',
+			'Vous choisissez le lieu qui vous convient et le moment de la journée',
 		image:
 			'https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 	},
@@ -30,7 +30,7 @@ const featuredPosts = [
 		title: 'En studio',
 
 		description:
-			'Vous êtes reçu dans mon studio après une prise de rendez-vous. Toute une installation de pointe pour faire un beau cadre',
+			'Vous êtes reçu dans mon studio après une prise de rendez-vous.',
 		image:
 			'https://images.unsplash.com/photo-1603425013520-e0b30e6e37dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
 	},
@@ -64,9 +64,9 @@ export default function Index() {
 						compétences.
 						<br />A travers des galleries de photos, découvrez ce qui vous
 						attend lors d'une séance.
-						<>
+						<div>
 							<Button sx={{ my: 4, mx: 1.5 }}>Parcourir le site</Button>
-						</>
+						</div>
 					</Typography>
 				</Stack>
 				<Box display='flex' spacing={4}>

@@ -32,7 +32,7 @@ export default function Album() {
 						<Card>
 							<CardMedia
 								component='img'
-								image='https://images.unsplash.com/photo-1551934262-db2d7dd517f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=777&q=80'
+								image='https://images.unsplash.com/photo-1510154221590-ff63e90a136f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
 								alt='Bébé'
 							/>
 						</Card>
